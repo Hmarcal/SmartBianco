@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
         alunosBtc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               /* Intent alunosIntent = new Intent(MainActivity.this, Aula.class);
-                startActivity(alunosIntent);*/
+                Intent alunosIntent = new Intent(MainActivity.this, Aula.class);
+                startActivity(alunosIntent);
             }
         });
 

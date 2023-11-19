@@ -81,7 +81,7 @@ public class Aquecimento extends AppCompatActivity {
                 resetTimer();
             }
         });
-    } //
+    } // Final onCreate
 
 
     private void setTime(long milliseconds) {
