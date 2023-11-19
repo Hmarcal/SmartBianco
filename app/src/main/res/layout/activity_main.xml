@@ -60,7 +60,7 @@
         android:layout_marginTop="30dp"
         android:textColor="@color/logo"
         android:backgroundTint="@color/black"
-        android:text="WOD" />
+        android:text="W.O.D" />
 
     <Button
         android:id="@+id/alunosXML"

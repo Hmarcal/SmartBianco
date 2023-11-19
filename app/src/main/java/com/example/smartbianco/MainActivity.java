@@ -37,16 +37,16 @@ public class MainActivity extends AppCompatActivity {
         skillBtc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               /* Intent  skillIntent = new Intent(MainActivity.this, Skill.class);
-                startActivity(skillIntent);*/
+                Intent  skillIntent = new Intent(MainActivity.this, Skill.class);
+                startActivity(skillIntent);
             }
         });
 
         wodBtc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*Intent wodIntent = new Intent(MainActivity.this, Wod.class);
-                startActivity(wodIntent);*/
+                Intent wodIntent = new Intent(MainActivity.this, Wod.class);
+                startActivity(wodIntent);
             }
         });
 
