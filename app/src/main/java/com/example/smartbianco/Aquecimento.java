@@ -16,13 +16,8 @@ import java.util.Locale;
 
 public class Aquecimento extends AppCompatActivity {
 
-    /*@Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aquecimento);}*/
 
-
-    /*private EditText aquecimentoInputTXT;
+    private EditText aquecimentoInputTXT;
     private TextView aquecimentoCronoTXT;
     private Button  BtcAquecimentoSet;
     private Button  BtcAquecimentoStartPause;
@@ -56,7 +51,7 @@ public class Aquecimento extends AppCompatActivity {
                     return;
                 }
 
-                long millisInput = Long.parseLong(input) * 6000;
+                long millisInput = Long.parseLong(input) * 60000;
                 if (millisInput == 0){
                     Toast.makeText(Aquecimento.this,"Entre com Número Positivo", Toast.LENGTH_SHORT).show();
                     return;
@@ -82,6 +77,7 @@ public class Aquecimento extends AppCompatActivity {
         BtcAquecimentoReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                pauseTimer();
                 resetTimer();
             }
         });
@@ -108,27 +104,25 @@ public class Aquecimento extends AppCompatActivity {
             @Override
             public void onFinish() {
                 mTimerRunning = false;
-                //updateWatchInterface();
+                updateWatchInterface();
             }
         }.start();
 
         mTimerRunning = true;
-        //updateWatchInterface();
+        updateWatchInterface();
     }
 
     private void pauseTimer() {
         mCountDownTimer.cancel();
         mTimerRunning = false;
-        //updateWatchInterface();
+        updateWatchInterface();
     }
 
     private void resetTimer() {
         mTimeLeftMillis = mIniciarTempoMillis;
         updateCountDownText();
-        //updateWatchInterface();
+
     }
-
-
 
     private void updateCountDownText() {
         int horas       = (int) (mTimeLeftMillis / 1000) / 3600;
@@ -145,10 +139,13 @@ public class Aquecimento extends AppCompatActivity {
         aquecimentoCronoTXT.setText(timeLeftFormatted);
     }
 
-    *//*private void updateWatchInterface() {
+    private void updateWatchInterface() {
         if (mTimerRunning){
+            BtcAquecimentoStartPause.setText("Pausar");
+        }else {
+            BtcAquecimentoStartPause.setText("Iniciar");
         }
-    }*//*
+    }
 
     private void closeKeyboard() {
         View view = this.getCurrentFocus();
@@ -157,17 +154,6 @@ public class Aquecimento extends AppCompatActivity {
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }
-
-    *//*@Override
-    protected void onStop() {
-        super.onStop();
-
-        SharedPreferences
-
-    }
-    *//*
-
-*/
 
 
 }// FINAL
