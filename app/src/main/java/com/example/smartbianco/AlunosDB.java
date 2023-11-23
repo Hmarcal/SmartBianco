@@ -44,7 +44,7 @@ public class AlunosDB extends SQLiteOpenHelper {
     }
 
 
-    public long salvaAlunos(Alunos alunos){
+    public long salvaAlunos(Alunos alunos){ //cria conexão com o DB e insere o nome digitado na classe aula
         long id = alunos.get_id();
 
         SQLiteDatabase db = getWritableDatabase();
@@ -68,7 +68,7 @@ public class AlunosDB extends SQLiteOpenHelper {
     }
 
 
-    public int apagaAlunos(String nomeAlunos) {
+    public int apagaAlunos(String nomeAlunos) { //cria conexão com o DB e apaga o nome digitado na classe aula
         SQLiteDatabase db = getWritableDatabase();
         try {
             int count = db.delete(TABLE_NAME,"nome=?", new String[]{nomeAlunos});
@@ -80,7 +80,7 @@ public class AlunosDB extends SQLiteOpenHelper {
     }
 
 
-    public void excluirAlunos(){
+    public void excluirAlunos(){ //cria conexão com o DB e apaga toda a linha "alunos" na classe aula
 
         SQLiteDatabase db = getWritableDatabase();
         try{

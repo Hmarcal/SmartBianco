@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         wodBtc = findViewById(R.id.wodXML);
         alunosBtc = findViewById(R.id.alunosXML);
 
-        aquecimentoBtc.setOnClickListener(new View.OnClickListener() {
+        aquecimentoBtc.setOnClickListener(new View.OnClickListener() { //Cria função para o botão XML e inicia a Activity Aquecimento
             @Override
             public void onClick(View view) {
                 Intent aquecimentoIntent = new Intent(MainActivity.this, Aquecimento.class);
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        skillBtc.setOnClickListener(new View.OnClickListener() {
+        skillBtc.setOnClickListener(new View.OnClickListener() { //Cria função para o botão XML e inicia a Activity Skill
             @Override
             public void onClick(View view) {
                 Intent  skillIntent = new Intent(MainActivity.this, Skill.class);
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        wodBtc.setOnClickListener(new View.OnClickListener() {
+        wodBtc.setOnClickListener(new View.OnClickListener() { //Cria função para o botão XML e inicia a Activity Wod
             @Override
             public void onClick(View view) {
                 Intent wodIntent = new Intent(MainActivity.this, Wod.class);
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        alunosBtc.setOnClickListener(new View.OnClickListener() {
+        alunosBtc.setOnClickListener(new View.OnClickListener() { //Cria função para o botão XML e inicia a Activity Aula
             @Override
             public void onClick(View view) {
                 Intent alunosIntent = new Intent(MainActivity.this, Aula.class);
